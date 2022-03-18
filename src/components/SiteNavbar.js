@@ -22,7 +22,6 @@ const SiteNavbar = () => {
     }
   }
 
-
   const updateSearchValue = (e) => {
     setSearchValue(e.target.value)
   }
@@ -52,33 +51,40 @@ const SiteNavbar = () => {
   }
   return (
     <ul>
+
       <div className="nav-container">
+
         <li>
           <Link to='/'>Home</Link>
         </li>
+
         <li id='search-li'>
           <form onSubmit={handleSubmit}>
+
             <div id="search-box">
               <input onChange={updateSearchValue} onKeyPress={handleKeyPress} type="text" name='search' placeholder='Search' value={searchValue} />
               {quickSearchFilm.Response === 'True' &&
+
                 <Link to={'/film/' + quickSearchFilm.imdbID} onClick={clearSearch}>
                   <div className='quick-search-container'>
                     {quickSearchFilm.Poster === 'N/A' ? <img src={noPoster} alt="poster" /> : <img src={quickSearchFilm.Poster} alt={quickSearchFilm.Title} />}
-
-
                     <div className='quick-search-text'>
                       <h3>{quickSearchFilm.Title}</h3>
                       <p>{quickSearchFilm.Released}</p>
                     </div>
                   </div>
                 </Link>}
+
             </div>
+
             <input type="submit" value='Search' />
           </form>
         </li>
+
         <li>
           <button onClick={goBack}>Go back</button>
         </li>
+
       </div>
 
     </ul>

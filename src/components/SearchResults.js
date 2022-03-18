@@ -30,11 +30,16 @@ const SearchResults = ({ Spinner }) => {
 
   return (
     <main>
+
       <h1>Search Results</h1>
       <div className='results-container'>
+
         {films.length ?
+
           films.map(film => {
+
             const { imdbID, Title, Type, Year, Poster } = film
+
             return (
               <Link key={imdbID} to={'/film/' + imdbID}>
                 <div className='search-card'>
