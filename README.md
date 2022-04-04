@@ -44,7 +44,7 @@ After a while attempting to find another free football based API, we decided to 
 
 As we had lost a fair bit of time trying to make the football API work, so we made a very quick wire-frame and moved to starting the development.
 
-### Development.
+### Development
 
 We began by attempting to use Liveshare in VSCode but this proved to be unworkable due to poor internet connection. So we decided to work together with me sharing my screen to get the basic structure of the page sorted before splitting off and doing separate components.
 
